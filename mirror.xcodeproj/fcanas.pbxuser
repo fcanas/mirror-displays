@@ -1,0 +1,257 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = E7DBE7DE0F3AB04F00F76726 /* MirrorDisplays */;
+		activeTarget = E7DBE7DC0F3AB04F00F76726 /* MirrorDisplays */;
+		addToTargets = (
+			E7DBE7DC0F3AB04F00F76726 /* MirrorDisplays */,
+		);
+		codeSenseManager = E7DBE7C90F3AAF7400F76726 /* Code sense */;
+		executables = (
+			E7DBE7C20F3AAF5500F76726 /* mirror */,
+			E7DBE7DE0F3AB04F00F76726 /* MirrorDisplays */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					706,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					783,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 293590138;
+			PBXWorkspaceStateSaveDate = 293590138;
+		};
+		perUserProjectItems = {
+			E729CA7F10ED4C7900FC54D2 = E729CA7F10ED4C7900FC54D2 /* PBXTextBookmark */;
+			E72C2AFA0F8BF6EF000E3F51 = E72C2AFA0F8BF6EF000E3F51 /* PlistBookmark */;
+			E72C2AFB0F8BF6EF000E3F51 = E72C2AFB0F8BF6EF000E3F51 /* PBXTextBookmark */;
+			E72C2B130F8BF7D5000E3F51 = E72C2B130F8BF7D5000E3F51 /* PBXTextBookmark */;
+			E7DE6A0011178B39002EDD1A = E7DE6A0011178B39002EDD1A /* PBXTextBookmark */;
+			E7EA2CFD117FD47B004FD6AE /* PBXTextBookmark */ = E7EA2CFD117FD47B004FD6AE /* PBXTextBookmark */;
+		};
+		sourceControlManager = E7DBE7C80F3AAF7400F76726 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* mirror.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1001, 2028}}";
+			sepNavSelRange = "{3422, 73}";
+			sepNavVisRange = "{1310, 1112}";
+			sepNavWindowFrame = "{{61, 177}, {1033, 778}}";
+		};
+	};
+	32A70AAB03705E1F00C91783 /* mirror_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {974, 706}}";
+			sepNavSelRange = "{2, 0}";
+			sepNavVisRange = "{0, 933}";
+			sepNavWindowFrame = "{{107, 135}, {1033, 778}}";
+		};
+	};
+	8DD76F960486AA7600D96B5E /* mirror */ = {
+		activeExec = 0;
+		executables = (
+			E7DBE7C20F3AAF5500F76726 /* mirror */,
+		);
+	};
+	C6859EA3029092ED04C91782 /* mirror.1 */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {884, 1596}}";
+			sepNavSelRange = "{3204, 0}";
+			sepNavVisRange = "{2567, 722}";
+			sepNavWindowFrame = "{{130, 114}, {1033, 778}}";
+		};
+	};
+	E729CA7F10ED4C7900FC54D2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* mirror.m */;
+		name = "mirror.m: 110";
+		rLen = 73;
+		rLoc = 3422;
+		rType = 0;
+		vrLen = 1872;
+		vrLoc = 2588;
+	};
+	E72C2AFA0F8BF6EF000E3F51 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E7DBE7DF0F3AB04F00F76726 /* MirrorDisplays-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/fcanas/Projects/mirror/MirrorDisplays-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	E72C2AFB0F8BF6EF000E3F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7DBE8400F3AB64A00F76726 /* gpl.txt */;
+		name = "gpl.txt: 675";
+		rLen = 0;
+		rLoc = 35147;
+		rType = 0;
+		vrLen = 1146;
+		vrLoc = 784;
+	};
+	E72C2B130F8BF7D5000E3F51 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C6859EA3029092ED04C91782 /* mirror.1 */;
+		name = "mirror.1: 83";
+		rLen = 0;
+		rLoc = 3204;
+		rType = 0;
+		vrLen = 643;
+		vrLoc = 2567;
+	};
+	E7DBE7C20F3AAF5500F76726 /* mirror */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = mirror;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	E7DBE7C80F3AAF7400F76726 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	E7DBE7C90F3AAF7400F76726 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	E7DBE7DC0F3AB04F00F76726 /* MirrorDisplays */ = {
+		activeExec = 0;
+		executables = (
+			E7DBE7DE0F3AB04F00F76726 /* MirrorDisplays */,
+		);
+	};
+	E7DBE7DE0F3AB04F00F76726 /* MirrorDisplays */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MirrorDisplays;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	E7DBE7DF0F3AB04F00F76726 /* MirrorDisplays-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{84, 156}, {1033, 778}}";
+		};
+	};
+	E7DBE8400F3AB64A00F76726 /* gpl.txt */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {884, 12901}}";
+			sepNavSelRange = "{35147, 0}";
+			sepNavVisRange = "{784, 1146}";
+			sepNavWindowFrame = "{{153, 93}, {1033, 778}}";
+		};
+	};
+	E7DE6A0011178B39002EDD1A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* mirror.m */;
+		name = "mirror.m: 110";
+		rLen = 73;
+		rLoc = 3422;
+		rType = 0;
+		vrLen = 1898;
+		vrLoc = 2258;
+	};
+	E7EA2CFD117FD47B004FD6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* mirror.m */;
+		name = "mirror.m: 110";
+		rLen = 73;
+		rLoc = 3422;
+		rType = 0;
+		vrLen = 1854;
+		vrLoc = 2302;
+	};
+}
