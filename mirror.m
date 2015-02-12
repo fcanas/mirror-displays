@@ -3,7 +3,7 @@
  *  mirror
  *
  *  Created by Fabian Canas on 2/4/09.
- *  Copyright 2009 Fabián Cañas. All rights reserved.
+ *  Copyright 2009-2015 Fabián Cañas. All rights reserved.
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -69,6 +69,21 @@ MirrorAction getAction()
     return action;
 }
 
+#define MAX_DISPLAYS 10
+#define SECONDARY_DISPLAY_COUNT 9
+
+static CGDisplayCount numberOfTotalDspys = MAX_DISPLAYS;
+
+static CGDirectDisplayID activeDspys[MAX_DISPLAYS];
+static CGDirectDisplayID onlineDspys[MAX_DISPLAYS];
+static CGDirectDisplayID secondaryDspys[SECONDARY_DISPLAY_COUNT];
+
+void multiConfigureDisplays(CGDisplayConfigRef configRef, CGDirectDisplayID *secondaryDspys, int count, CGDirectDisplayID master) {
+    for (int i = 0; i<count; i++) {
+        CGConfigureDisplayMirrorOfDisplay(configRef, secondaryDspys[i], master);
+    }
+}
+
 int main (int argc, const char * argv[]) {
     
     MirrorAction action = getAction();
@@ -88,12 +103,6 @@ int main (int argc, const char * argv[]) {
     CGDisplayCount numberOfActiveDspys;
     CGDisplayCount numberOfOnlineDspys;
     
-    CGDisplayCount numberOfTotalDspys = 2; // The number of total displays I'm interested in
-    
-    CGDirectDisplayID activeDspys[] = {0,0};
-    CGDirectDisplayID onlineDspys[] = {0,0};
-    CGDirectDisplayID secondaryDspy;
-    
     CGDisplayErr activeError = CGGetActiveDisplayList (numberOfTotalDspys,activeDspys,&numberOfActiveDspys);
     
     if (activeError!=0) NSLog(@"Error in obtaining active diplay list: %d\n",activeError);
@@ -102,19 +111,17 @@ int main (int argc, const char * argv[]) {
     
     if (onlineError!=0) NSLog(@"Error in obtaining online diplay list: %d\n",onlineError);
     
-    // Right now we're only dealing with two available monitors
-    if (numberOfOnlineDspys>2) {
-        printf("Cannot handle more than 2 displays at this time. %d displays detected.\n",numberOfOnlineDspys);
-        return 1;
-    } else if (numberOfOnlineDspys<1) {
+    if (numberOfOnlineDspys<2) {
         printf("No secondary display detected.\n");
         return 1;
     }
     
-    if (onlineDspys[0]==CGMainDisplayID()){
-        secondaryDspy = onlineDspys[1];
-    } else {
-        secondaryDspy = onlineDspys[0];
+    int secondaryDisplayIndex = 0;
+    for (int displayIndex = 0; displayIndex<numberOfOnlineDspys; displayIndex++) {
+        if (onlineDspys[displayIndex] != CGMainDisplayID()) {
+            secondaryDspys[secondaryDisplayIndex] = onlineDspys[displayIndex];
+            secondaryDisplayIndex++;
+        }
     }
     
     CGDisplayConfigRef configRef;
@@ -125,26 +132,23 @@ int main (int argc, const char * argv[]) {
     //fadeChangeError = CGConfigureDisplayFadeEffect (configRef,1.5,1.5,0.0,0.0,0.0);
     //if (fadeChangeError!= 0) NSLog(@"Error with CGConfigureDisplayFadeEffect %d\n",fadeChangeError);
     
+    if (action == toggle) {
+        if (numberOfActiveDspys==numberOfOnlineDspys) {
+            action = on;
+        } else {
+            action = off;
+        }
+    }
+    
     switch (action) {
-        case toggle:
-            if (numberOfActiveDspys==2) { // Displays are unmirrored -> mirror them
-                err = CGConfigureDisplayMirrorOfDisplay (configRef,secondaryDspy,CGMainDisplayID());
-            } else { // Displays are mirrored -> unmirror them
-                err = CGConfigureDisplayMirrorOfDisplay (configRef,secondaryDspy,kCGNullDirectDisplay);
-            }
-            break;
         case on:
-            if (numberOfActiveDspys==2)
-                err = CGConfigureDisplayMirrorOfDisplay (configRef,secondaryDspy,CGMainDisplayID());
-            //else return 0;
+            multiConfigureDisplays(configRef, secondaryDspys, numberOfOnlineDspys - 1, CGMainDisplayID());
             break;
         case off:
-            if (numberOfActiveDspys!=2)
-                err = CGConfigureDisplayMirrorOfDisplay (configRef,secondaryDspy,kCGNullDirectDisplay);
-            //else return 0;
+            multiConfigureDisplays(configRef, secondaryDspys, numberOfOnlineDspys - 1, kCGNullDirectDisplay);
             break;
         case query:
-            if (numberOfActiveDspys==2) { // Displays are unmirrored
+            if (numberOfActiveDspys==numberOfOnlineDspys) { // Displays are unmirrored
                 printf("off\n");
             } else { // Displays are mirrored
                 printf("on\n");
