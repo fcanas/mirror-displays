@@ -89,7 +89,7 @@ int main (int argc, const char * argv[]) {
     MirrorAction action = getAction();
     
     if (action == help){
-        printf("Mirror Displays version 1.03\nCopyright 2009-2015, Fabián Cañas\n");
+        printf("Mirror Displays version 1.1\nCopyright 2009-2015, Fabián Cañas\n");
         printf("usage: mirror [option]\tPassing more than one option produces undefined behavior.");
         printf("\n  -h\t\tPrint this usage and exit.");
         printf("\n  -t\t\tToggle mirroring (default behavior)");
