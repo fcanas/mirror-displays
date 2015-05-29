@@ -116,6 +116,7 @@ int main (int argc, const char * argv[]) {
         return 1;
     }
     
+    bool displaysMirrored = CGDisplayIsInMirrorSet(CGMainDisplayID());
     int secondaryDisplayIndex = 0;
     for (int displayIndex = 0; displayIndex<numberOfOnlineDspys; displayIndex++) {
         if (onlineDspys[displayIndex] != CGMainDisplayID()) {
@@ -133,10 +134,10 @@ int main (int argc, const char * argv[]) {
     //if (fadeChangeError!= 0) NSLog(@"Error with CGConfigureDisplayFadeEffect %d\n",fadeChangeError);
     
     if (action == toggle) {
-        if (numberOfActiveDspys==numberOfOnlineDspys) {
-            action = on;
-        } else {
+        if (displaysMirrored) {
             action = off;
+        } else {
+            action = on;
         }
     }
     
@@ -148,10 +149,10 @@ int main (int argc, const char * argv[]) {
             multiConfigureDisplays(configRef, secondaryDspys, numberOfOnlineDspys - 1, kCGNullDirectDisplay);
             break;
         case query:
-            if (numberOfActiveDspys==numberOfOnlineDspys) { // Displays are unmirrored
-                printf("off\n");
-            } else { // Displays are mirrored
+            if (displaysMirrored) { // Displays are unmirrored
                 printf("on\n");
+            } else { // Displays are mirrored
+                printf("off\n");
             }
             break;
         default:
