@@ -27,22 +27,17 @@ typedef NS_ENUM(NSUInteger, MirrorAction) {
     on,
     off,
     toggle,
-    query
+    query,
+    linkDiplays,
 };
 
-MirrorAction getAction()
+MirrorAction getAction(int *masterIndex, int *slaveIndex)
 {
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    
-    NSArray *args = [[NSProcessInfo processInfo] arguments];
-    NSArray *sorted_args = [args sortedArrayUsingSelector:@selector(compare:)];
-    NSEnumerator *enm = [sorted_args objectEnumerator];
-    
-    NSString *arg;
-    
+    NSArray<NSString *> *args = [[NSProcessInfo processInfo] arguments];
     MirrorAction action = toggle;
-    
-    while (arg = [enm nextObject]) {
+
+    for (int idx = 0; idx < args.count; idx++) {
+        NSString *arg = args[idx];
         if ([arg isEqualToString:@"-h"]){
             action = help;
             break;
@@ -63,9 +58,23 @@ MirrorAction getAction()
             action = query;
             break;
         }
+        if ([arg isEqualToString:@"-l"]) {
+            if (args.count < idx + 2) {
+                break;
+            }
+            NSString *masterIndexString = args[idx + 1];
+            NSString *slaveIndexString = args[idx + 2];
+            if (masterIndex != NULL) {
+                *masterIndex = [masterIndexString intValue];
+            }
+            if (slaveIndex != NULL) {
+                *slaveIndex = [slaveIndexString intValue];
+            }
+            action = linkDiplays;
+            break;
+        }
     }
-    
-    [pool drain];
+
     return action;
 }
 
@@ -78,24 +87,27 @@ static CGDirectDisplayID activeDspys[MAX_DISPLAYS];
 static CGDirectDisplayID onlineDspys[MAX_DISPLAYS];
 static CGDirectDisplayID secondaryDspys[SECONDARY_DISPLAY_COUNT];
 
-void multiConfigureDisplays(CGDisplayConfigRef configRef, CGDirectDisplayID *secondaryDspys, int count, CGDirectDisplayID master) {
+CGError multiConfigureDisplays(CGDisplayConfigRef configRef, CGDirectDisplayID *secondaryDspys, int count, CGDirectDisplayID master) {
+    CGError greatestError = 0;
     for (int i = 0; i<count; i++) {
-        CGConfigureDisplayMirrorOfDisplay(configRef, secondaryDspys[i], master);
+        greatestError = MAX(CGConfigureDisplayMirrorOfDisplay(configRef, secondaryDspys[i], master), greatestError);
     }
+    return greatestError;
 }
 
 int main (int argc, const char * argv[]) {
-    
-    MirrorAction action = getAction();
+    int masterIndex, slaveIndex;
+    MirrorAction action = getAction(&masterIndex, &slaveIndex);
     
     if (action == help){
-        printf("Mirror Displays version 1.1\nCopyright 2009-2015, Fabián Cañas\n");
+        printf("Mirror Displays version 1.1\nCopyright 2009-2018, Fabián Cañas\n");
         printf("usage: mirror [option]\tPassing more than one option produces undefined behavior.");
         printf("\n  -h\t\tPrint this usage and exit.");
         printf("\n  -t\t\tToggle mirroring (default behavior)");
         printf("\n  -on\t\tTurn Mirroring On");
         printf("\n  -off\t\tTurn Mirroring Off");
         printf("\n  -q\t\tQuery the Mirroring state and write \"on\" or \"off\" to stdout");
+        printf("\n  -l A B\t Makes display at index B mirror the display at index A");
         printf("\n");
         return 0;
     }
@@ -132,7 +144,7 @@ int main (int argc, const char * argv[]) {
     //CGError fadeChangeError;
     //fadeChangeError = CGConfigureDisplayFadeEffect (configRef,1.5,1.5,0.0,0.0,0.0);
     //if (fadeChangeError!= 0) NSLog(@"Error with CGConfigureDisplayFadeEffect %d\n",fadeChangeError);
-    
+
     if (action == toggle) {
         if (displaysMirrored) {
             action = off;
@@ -143,10 +155,10 @@ int main (int argc, const char * argv[]) {
     
     switch (action) {
         case on:
-            multiConfigureDisplays(configRef, secondaryDspys, numberOfOnlineDspys - 1, CGMainDisplayID());
+            err = multiConfigureDisplays(configRef, secondaryDspys, numberOfOnlineDspys - 1, CGMainDisplayID());
             break;
         case off:
-            multiConfigureDisplays(configRef, secondaryDspys, numberOfOnlineDspys - 1, kCGNullDirectDisplay);
+            err = multiConfigureDisplays(configRef, secondaryDspys, numberOfOnlineDspys - 1, kCGNullDirectDisplay);
             break;
         case query:
             if (displaysMirrored) { // Displays are unmirrored
@@ -154,6 +166,17 @@ int main (int argc, const char * argv[]) {
             } else { // Displays are mirrored
                 printf("off\n");
             }
+            break;
+        case linkDiplays:
+            if (numberOfOnlineDspys <= masterIndex) {
+                printf("Index of master display out of bounds\n");
+                return 1;
+            }
+            if (numberOfOnlineDspys <= slaveIndex) {
+                printf("Index of slave display out of bounds\n");
+                return 1;
+            }
+            err = CGConfigureDisplayMirrorOfDisplay(configRef, onlineDspys[slaveIndex], onlineDspys[masterIndex]);
             break;
         default:
             break;
