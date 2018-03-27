@@ -57,6 +57,7 @@
 		8DD76FA10486AA7600D96B5E /* mirror */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mirror; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859EA3029092ED04C91782 /* mirror.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = mirror.1; sourceTree = "<group>"; };
 		E776690E2069C607008EF6C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E77669112069C8FD008EF6C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E7DBE7DD0F3AB04F00F76726 /* MirrorDisplays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirrorDisplays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DBE7DF0F3AB04F00F76726 /* MirrorDisplays-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MirrorDisplays-Info.plist"; sourceTree = "<group>"; };
 		E7DBE8060F3AB19900F76726 /* MDIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MDIcon.icns; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				E7DBE8060F3AB19900F76726 /* MDIcon.icns */,
+				E77669112069C8FD008EF6C9 /* README.md */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859EA2029092E104C91782 /* Documentation */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
