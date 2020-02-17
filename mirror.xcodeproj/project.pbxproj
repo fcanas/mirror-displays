@@ -8,25 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8DD76F9A0486AA7600D96B5E /* mirror.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* mirror.m */; settings = {ATTRIBUTES = (); }; };
-		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* mirror.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* mirror.1 */; };
 		E776690F2069C607008EF6C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E776690E2069C607008EF6C9 /* CoreGraphics.framework */; };
-		E77669102069C612008EF6C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E776690E2069C607008EF6C9 /* CoreGraphics.framework */; };
-		E7DBE7F20F3AB13100F76726 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
-		E7DBE8070F3AB19900F76726 /* MDIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E7DBE8060F3AB19900F76726 /* MDIcon.icns */; };
-		E7DBE8300F3AB40100F76726 /* mirror in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DD76FA10486AA7600D96B5E /* mirror */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		E7DBE8410F3AB64A00F76726 /* gpl.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7DBE8400F3AB64A00F76726 /* gpl.txt */; };
+		E7ACBD9723FA19B80030DD39 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7ACBD9523FA19B80030DD39 /* MainMenu.xib */; };
+		E7ACBD9F23FA1B390030DD39 /* mirror.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* mirror.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E7DBE8340F3AB43A00F76726 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
-			remoteInfo = mirror;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		8DD76F9E0486AA7600D96B5E /* CopyFiles */ = {
@@ -39,31 +25,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		E7DBE8390F3AB46300F76726 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 6;
-			files = (
-				E7DBE8300F3AB40100F76726 /* mirror in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* mirror.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mirror.m; sourceTree = "<group>"; };
-		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8DD76FA10486AA7600D96B5E /* mirror */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mirror; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859EA3029092ED04C91782 /* mirror.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = mirror.1; sourceTree = "<group>"; };
 		E732D44123F82FF800A4C11A /* mirrorRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mirrorRelease.entitlements; sourceTree = "<group>"; };
-		E732D44223F8304100A4C11A /* MirrorDisplaysRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MirrorDisplaysRelease.entitlements; sourceTree = "<group>"; };
-		E732D44323F89AC400A4C11A /* MirrorDisplays.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MirrorDisplays.entitlements; sourceTree = "<group>"; };
 		E732D44423F89BF500A4C11A /* mirror.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mirror.entitlements; sourceTree = "<group>"; };
 		E776690E2069C607008EF6C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E77669112069C8FD008EF6C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E7DBE7DD0F3AB04F00F76726 /* MirrorDisplays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirrorDisplays.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7DBE7DF0F3AB04F00F76726 /* MirrorDisplays-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MirrorDisplays-Info.plist"; sourceTree = "<group>"; };
+		E7ACBD8E23FA19B40030DD39 /* MirrorDisplays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirrorDisplays.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7ACBD9623FA19B80030DD39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E7ACBD9823FA19B80030DD39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7ACBD9B23FA19B80030DD39 /* MirrorDisplays.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MirrorDisplays.entitlements; sourceTree = "<group>"; };
+		E7ACBDA023FA1BD80030DD39 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = ../../../../System/Library/Frameworks/Foundation.framework; sourceTree = "<group>"; };
 		E7DBE8060F3AB19900F76726 /* MDIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MDIcon.icns; sourceTree = "<group>"; };
 		E7DBE8400F3AB64A00F76726 /* gpl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gpl.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,16 +50,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E776690F2069C607008EF6C9 /* CoreGraphics.framework in Frameworks */,
-				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7DBE7DB0F3AB04F00F76726 /* Frameworks */ = {
+		E7ACBD8B23FA19B40030DD39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E77669102069C612008EF6C9 /* CoreGraphics.framework in Frameworks */,
-				E7DBE7F20F3AB13100F76726 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,17 +66,13 @@
 		08FB7794FE84155DC02AAC07 /* mirror */ = {
 			isa = PBXGroup;
 			children = (
-				E732D44423F89BF500A4C11A /* mirror.entitlements */,
-				E732D44323F89AC400A4C11A /* MirrorDisplays.entitlements */,
-				E732D44223F8304100A4C11A /* MirrorDisplaysRelease.entitlements */,
-				E732D44123F82FF800A4C11A /* mirrorRelease.entitlements */,
-				E7DBE8060F3AB19900F76726 /* MDIcon.icns */,
 				E77669112069C8FD008EF6C9 /* README.md */,
+				E732D44423F89BF500A4C11A /* mirror.entitlements */,
+				E732D44123F82FF800A4C11A /* mirrorRelease.entitlements */,
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859EA2029092E104C91782 /* Documentation */,
-				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				E7ACBD8F23FA19B40030DD39 /* MirrorDisplays */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
-				E7DBE7DF0F3AB04F00F76726 /* MirrorDisplays-Info.plist */,
 				E776690D2069C607008EF6C9 /* Frameworks */,
 			);
 			name = mirror;
@@ -117,19 +86,11 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
-			);
-			name = "External Frameworks and Libraries";
-			sourceTree = "<group>";
-		};
 		1AB674ADFE9D54B511CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				8DD76FA10486AA7600D96B5E /* mirror */,
-				E7DBE7DD0F3AB04F00F76726 /* MirrorDisplays.app */,
+				E7ACBD8E23FA19B40030DD39 /* MirrorDisplays.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,9 +107,21 @@
 		E776690D2069C607008EF6C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7ACBDA023FA1BD80030DD39 /* Foundation.framework */,
 				E776690E2069C607008EF6C9 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7ACBD8F23FA19B40030DD39 /* MirrorDisplays */ = {
+			isa = PBXGroup;
+			children = (
+				E7DBE8060F3AB19900F76726 /* MDIcon.icns */,
+				E7ACBD9523FA19B80030DD39 /* MainMenu.xib */,
+				E7ACBD9823FA19B80030DD39 /* Info.plist */,
+				E7ACBD9B23FA19B80030DD39 /* MirrorDisplays.entitlements */,
+			);
+			path = MirrorDisplays;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,24 +145,21 @@
 			productReference = 8DD76FA10486AA7600D96B5E /* mirror */;
 			productType = "com.apple.product-type.tool";
 		};
-		E7DBE7DC0F3AB04F00F76726 /* MirrorDisplays */ = {
+		E7ACBD8D23FA19B40030DD39 /* MirrorDisplays */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7DBE7E20F3AB05000F76726 /* Build configuration list for PBXNativeTarget "MirrorDisplays" */;
+			buildConfigurationList = E7ACBD9C23FA19B80030DD39 /* Build configuration list for PBXNativeTarget "MirrorDisplays" */;
 			buildPhases = (
-				E7DBE7D90F3AB04F00F76726 /* Resources */,
-				E7DBE7DA0F3AB04F00F76726 /* Sources */,
-				E7DBE7DB0F3AB04F00F76726 /* Frameworks */,
-				E7DBE8390F3AB46300F76726 /* CopyFiles */,
+				E7ACBD8A23FA19B40030DD39 /* Sources */,
+				E7ACBD8B23FA19B40030DD39 /* Frameworks */,
+				E7ACBD8C23FA19B40030DD39 /* Resources */,
 			);
 			buildRules = (
 			);
-			comments = "Copyright 2009 Fabián Cañas. All rights reserved.\n\nThis program is free software: you can redistribute it and/or modify\t\nit under the terms of the GNU General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or\n(at your option) any later version.";
 			dependencies = (
-				E7DBE8350F3AB43A00F76726 /* PBXTargetDependency */,
 			);
 			name = MirrorDisplays;
 			productName = MirrorDisplays;
-			productReference = E7DBE7DD0F3AB04F00F76726 /* MirrorDisplays.app */;
+			productReference = E7ACBD8E23FA19B40030DD39 /* MirrorDisplays.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,8 +173,10 @@
 					8DD76F960486AA7600D96B5E = {
 						ProvisioningStyle = Manual;
 					};
-					E7DBE7DC0F3AB04F00F76726 = {
-						ProvisioningStyle = Manual;
+					E7ACBD8D23FA19B40030DD39 = {
+						CreatedOnToolsVersion = 11.3.1;
+						DevelopmentTeam = AXL96AEQK3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -221,18 +193,17 @@
 			projectRoot = "";
 			targets = (
 				8DD76F960486AA7600D96B5E /* mirror */,
-				E7DBE7DC0F3AB04F00F76726 /* MirrorDisplays */,
+				E7ACBD8D23FA19B40030DD39 /* MirrorDisplays */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E7DBE7D90F3AB04F00F76726 /* Resources */ = {
+		E7ACBD8C23FA19B40030DD39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7DBE8070F3AB19900F76726 /* MDIcon.icns in Resources */,
-				E7DBE8410F3AB64A00F76726 /* gpl.txt in Resources */,
+				E7ACBD9723FA19B80030DD39 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,22 +218,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7DBE7DA0F3AB04F00F76726 /* Sources */ = {
+		E7ACBD8A23FA19B40030DD39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACBD9F23FA1B390030DD39 /* mirror.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		E7DBE8350F3AB43A00F76726 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8DD76F960486AA7600D96B5E /* mirror */;
-			targetProxy = E7DBE8340F3AB43A00F76726 /* PBXContainerItemProxy */;
+/* Begin PBXVariantGroup section */
+		E7ACBD9523FA19B80030DD39 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7ACBD9623FA19B80030DD39 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
 		};
-/* End PBXTargetDependency section */
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB927508733DD40010E9CD /* Debug */ = {
@@ -379,59 +354,96 @@
 			};
 			name = Release;
 		};
-		E7DBE7E00F3AB04F00F76726 /* Debug */ = {
+		E7ACBD9D23FA19B80030DD39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = MirrorDisplays.entitlements;
-				CODE_SIGN_IDENTITY = "-";
-				CODE_SIGN_STYLE = Manual;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = MirrorDisplays/MirrorDisplays.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AXL96AEQK3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = "MirrorDisplays-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fabiancanas.${PRODUCT_NAME:identifier}";
-				PRODUCT_NAME = MirrorDisplays;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MirrorDisplays/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MARKETING_VERSION = 1.2.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiancanas.MirrorDisplays;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
-		E7DBE7E10F3AB04F00F76726 /* Release */ = {
+		E7ACBD9E23FA19B80030DD39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = MirrorDisplaysRelease.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_ENTITLEMENTS = MirrorDisplays/MirrorDisplays.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AXL96AEQK3;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "MirrorDisplays-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fabiancanas.${PRODUCT_NAME:identifier}";
-				PRODUCT_NAME = MirrorDisplays;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = MirrorDisplays/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MARKETING_VERSION = 1.2.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabiancanas.MirrorDisplays;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
@@ -457,11 +469,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7DBE7E20F3AB05000F76726 /* Build configuration list for PBXNativeTarget "MirrorDisplays" */ = {
+		E7ACBD9C23FA19B80030DD39 /* Build configuration list for PBXNativeTarget "MirrorDisplays" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E7DBE7E00F3AB04F00F76726 /* Debug */,
-				E7DBE7E10F3AB04F00F76726 /* Release */,
+				E7ACBD9D23FA19B80030DD39 /* Debug */,
+				E7ACBD9E23FA19B80030DD39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
