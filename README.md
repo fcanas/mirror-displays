@@ -13,7 +13,18 @@ usage: mirror [option]    Only the first option passed will be applied
   -l A B        Makes display at index B mirror the display at index A
 ```
 
-A little more [here](http://www.fabiancanas.com/Projects/MirrorDisplays/).
+## Installing
 
-Thanks to [hydra](https://github.com/hydra) for pushing me into moving this to GitHub from its original place on [Google Code](https://code.google.com/p/mirror-displays/)
+The `mirror` command line tool is available via a [Homebrew](https://brew.sh) [tap](https://docs.brew.sh/Taps#the-brew-tap-command):
+
+`brew install fcanas/tap/mirror-displays`
+
+or
+
+```
+brew tap fcanas/tap
+brew install mirror-displays
+```
+
+
 
