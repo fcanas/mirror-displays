@@ -100,8 +100,9 @@ int main (int argc, const char * argv[]) {
     MirrorAction action = getAction(&masterIndex, &slaveIndex);
     
     if (action == help){
-        printf("Mirror Displays version 1.2\nCopyright 2009-2018, Fabián Cañas\n");
-        printf("usage: mirror [option]\tOnly the first option passed will be applied");
+        printf("Mirror Displays version 1.2.1\nCopyright 2009-2020, Fabián Cañas\n");
+        printf("usage: mirror [option]\n\n");
+        printf("Only the first option passed will be applied\n");
         printf("\n  -h\t\tPrint this usage and exit.");
         printf("\n  -t\t\tToggle mirroring (default behavior)");
         printf("\n  -on\t\tTurn Mirroring On");
